@@ -1,0 +1,51 @@
+@use "../styles/styles.scss";
+
+.App.light-theme {
+  background-color: styles.$c-white-2;
+}
+
+.App.dark-theme {
+  background-color: styles.$c-black-2;
+}
+
+.App {
+  min-width: 375px;
+  min-height: 100vh;
+  @include styles.buttons;
+}
+
+.App .app-wrapper {
+  .board-load {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: 5;
+
+    .loading-icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-enter-active {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 200ms;
+}

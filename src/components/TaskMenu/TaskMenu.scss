@@ -1,0 +1,34 @@
+@use "../styles/styles.scss";
+
+.light-theme .TaskMenu .modal-content {
+  input,
+  textarea {
+    color: styles.$c-black-1;
+  }
+}
+
+.dark-theme .TaskMenu .modal-content {
+  input,
+  textarea {
+    color: styles.$c-white-1;
+  }
+}
+
+.TaskMenu .modal-content {
+  min-width: 343px;
+
+  @media (min-width: 512px) {
+    width: 480px;
+  }
+
+  padding: 32px;
+
+  h1,
+  .form-section {
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+  }
+}

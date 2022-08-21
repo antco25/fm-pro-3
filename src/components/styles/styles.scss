@@ -1,0 +1,112 @@
+//Colors
+$c-purple-1: #635fc7;
+$c-purple-2: #a8a4ff;
+$c-purple-3: #8471f2;
+
+$c-blue-1: #49c4e5;
+
+$c-green-1: #67e2ae;
+
+$c-black-1: #000112;
+$c-black-2: #20212c;
+$c-black-3: #2b2c37;
+$c-black-4: #3e3f4e;
+$c-black-5: #364e7e1a;
+
+$c-white-1: #fff;
+$c-white-2: #f4f7fd;
+$c-white-3: #e4ebfa;
+$c-white-4: #828fa3;
+
+$c-red-1: #ea5555;
+$c-red-2: #ff9898;
+
+//Buttons
+
+@mixin buttons {
+    button {
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+
+        svg {
+            display: block;
+        }
+
+        &:disabled {
+            cursor: default;
+        }
+    }
+
+    .button-1 {
+        padding: 14px 0;
+        border-radius: 24px;
+        background-color: $c-purple-1;
+
+        span {
+            color: $c-white-1;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            display: block;
+        }
+
+        &:disabled {
+            opacity: 0.25;
+        }
+
+        &:hover:not(:disabled) {
+            background-color: $c-purple-2;
+        }
+    }
+
+    .button-modal {
+        padding: 8px 0;
+        border-radius: 26px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 24px;
+        width: 100%;
+
+        &:disabled {
+            opacity: 0.25;
+        }
+
+        &:hover {
+            background-color: $c-purple-2;
+        }
+    }
+
+    .button-modal-1 {
+        background-color: $c-purple-1;
+        color: $c-white-1;
+
+        &:hover {
+            background-color: $c-purple-2;
+        }
+    }
+
+    &.light-theme .button-modal-2 {
+        background-color: rgba(98, 95, 199, 0.1);
+        &:hover {
+            background-color: rgba(98, 95, 199, 0.25);
+        }
+    }
+
+    &.dark-theme .button-modal-2 {
+        background-color: $c-white-1;
+    }
+
+    .button-modal-2 {
+        color: $c-purple-1;
+    }
+
+    .button-modal-3 {
+        background-color: $c-red-1;
+        color: $c-white-1;
+
+        &:hover {
+            background-color: $c-red-2;
+        }
+    }
+}

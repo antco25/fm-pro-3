@@ -1,0 +1,106 @@
+@use "../styles/styles.scss";
+
+.Board {
+  .board-wrap {
+    height: calc(100vh - 64px); //Height of NavBar
+    padding: 0 16px;
+    overflow-x: auto;
+    margin-left: 0;
+
+    @media (min-width: 768px) {
+      height: calc(100vh - 81px); //Height of NavBar
+    }
+
+    @media (min-width: 1440px) {
+      height: calc(100vh - 97px); //Height of NavBar
+    }
+    &.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.grid {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 24px;
+    }
+  }
+
+  .board-empty {
+    margin: 16px;
+
+    @media (min-width: 768px) {
+      margin: 24px;
+    }
+
+    p {
+      text-align: center;
+      margin: 0;
+      color: styles.$c-white-4;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 24px;
+
+      @media (min-width: 768px) {
+        padding: 0 40px;
+      }
+
+      @media (min-width: 1440px) {
+        margin-bottom: 32px;
+      }
+    }
+
+    .addColumn.button-1 {
+      text-align: center;
+      width: 174px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+.Board {
+  &.slide-enter-done {
+    @media (min-width: 768px) {
+      margin-left: 261px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-left: 301px;
+    }
+  }
+
+  &.slide-exit-done {
+    margin-left: 0;
+  }
+
+  &.slide-enter {
+    margin-left: 0;
+  }
+
+  &.slide-enter-active,
+  &.slide-exit {
+    @media (min-width: 768px) {
+      margin-left: 261px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-left: 301px;
+    }
+  }
+
+  &.slide-exit-active {
+    margin-left: 0;
+  }
+
+  &.slide-enter-active {
+    transition: linear 150ms;
+    transition-delay: 150ms;
+  }
+
+  &.slide-exit-active {
+    transition: linear 150ms;
+  }
+}

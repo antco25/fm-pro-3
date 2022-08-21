@@ -1,0 +1,208 @@
+@use "../styles/styles.scss";
+
+.light-theme .NavBar {
+  color: styles.$c-black-1;
+  background-color: styles.$c-white-1;
+
+  .logo g path {
+    fill: styles.$c-black-1;
+  }
+
+  .boardOptions {
+    background-color: styles.$c-white-1;
+  }
+
+  @media (min-width: 768px) {
+    border-bottom: 1px solid styles.$c-white-3;
+
+    .logo {
+      border-right: 1px solid styles.$c-white-3;
+    }
+  }
+}
+
+.dark-theme .NavBar {
+  color: styles.$c-white-1;
+  background-color: styles.$c-black-3;
+
+  .boardOptions {
+    background-color: styles.$c-black-2;
+  }
+
+  @media (min-width: 768px) {
+    border-bottom: 1px solid styles.$c-black-4;
+
+    .logo {
+      border-right: 1px solid styles.$c-black-4;
+    }
+  }
+}
+
+.NavBar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  min-width: 375px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 64px;
+
+  @media (min-width: 768px) {
+    height: 80px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 96px;
+  }
+
+  .logo {
+    margin: 0 16px;
+    cursor: pointer;
+
+    &.mobile {
+      cursor: auto;
+    }
+
+    svg {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      margin: 0;
+      width: 200px;
+      height: 100%;
+
+      svg {
+        padding: 27px 0;
+        margin-left: 24px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      width: 210px;
+
+      svg {
+        padding: 35px 0;
+      }
+    }
+  }
+
+  .openBoards {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    color: inherit;
+
+    span {
+      font-size: 18px;
+      line-height: 23px;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .arrow.up {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      span {
+        color: styles.$c-purple-1;
+      }
+
+    }
+  }
+
+  .boardName {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 700;
+    margin-left: 24px;
+
+    @media (min-width: 1440px) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-left: 32px;
+    }
+  }
+
+  .addTask.button-1 {
+    padding: 10px 18px;
+    margin-left: auto;
+
+    @media (min-width: 768px) {
+      padding: 14px 0;
+      width: 164px;
+    }
+  }
+
+  .OptionsMenu {
+    margin: 0 8px;
+
+    @media (min-width: 768px) {
+      margin: 0 24px 0 16px;
+    }
+  }
+}
+
+.NavBar .logo {
+  &.slide-enter-done {
+    @media (min-width: 768px) {
+      width: 260px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 300px;
+    }
+  }
+
+  &.slide-exit-done {
+    @media (min-width: 768px) {
+      width: 200px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 210px;
+    }
+  }
+
+  &.slide-enter {
+    @media (min-width: 768px) {
+      width: 200px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 210px;
+    }
+  }
+
+  &.slide-enter-active,
+  &.slide-exit {
+    @media (min-width: 768px) {
+      width: 260px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 300px;
+    }
+  }
+
+  &.slide-exit-active {
+    @media (min-width: 768px) {
+      width: 200px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 210px;
+    }
+  }
+
+  &.slide-enter-active {
+    transition: linear 150ms;
+  }
+
+  &.slide-exit-active {
+    transition: linear 45ms;
+  }
+}

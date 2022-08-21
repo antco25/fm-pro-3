@@ -1,0 +1,77 @@
+@use "../styles/styles.scss";
+
+$toggle-width: 40px;
+$toggle-height: 20px;
+$circle-dia: 14px;
+
+.light-theme .ThemeToggle {
+  background-color: styles.$c-white-2;
+
+}
+
+.dark-theme .ThemeToggle {
+  background-color: styles.$c-black-2;
+}
+
+.ThemeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 14px 0;
+
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: $toggle-width;
+    height: $toggle-height;
+    margin: 0 24px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: styles.$c-purple-1;
+    -webkit-transition: position 0.1s, background-color 0.1s;
+    transition: position 0.1s, background-color 0.1s;
+    border-radius: $toggle-height;
+
+    &:hover {
+      background-color: styles.$c-purple-2;
+    }
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: $circle-dia;
+    width: $circle-dia;
+    left: calc(($toggle-height - $circle-dia) / 2);
+    bottom: calc(($toggle-height - $circle-dia) / 2);
+    background-color: styles.$c-white-1;
+    -webkit-transition: transform 0.1s;
+    transition: transform 0.1s;
+    border-radius: 50%;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px styles.$c-purple-1;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(calc($toggle-width - $circle-dia - ($toggle-height - $circle-dia)));
+    -ms-transform: translateX(calc($toggle-width - $circle-dia - ($toggle-height - $circle-dia)));
+    transform: translateX(calc($toggle-width - $circle-dia - ($toggle-height - $circle-dia)));
+  }
+}

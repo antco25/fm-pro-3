@@ -1,0 +1,18 @@
+@use "../styles/styles.scss";
+
+.light-theme .ErrorPage {
+    color: styles.$c-black-1;
+}
+
+.dark-theme .ErrorPage {
+    color: styles.$c-white-1;
+}
+
+.ErrorPage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}

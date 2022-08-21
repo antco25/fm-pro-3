@@ -1,0 +1,264 @@
+@use "../styles/styles.scss";
+
+.light-theme .NavBoard {
+    .navboard-wrapper {
+        background-color: styles.$c-white-1;
+
+        @media (min-width: 768px) {
+            border-right: 1px solid styles.$c-white-3;
+        }
+    }
+
+    ul li:hover:not(.active),
+    .hide:hover {
+        background-color: rgba(98, 95, 199, 0.1);
+    }
+}
+
+.dark-theme .NavBoard {
+    .navboard-wrapper {
+        background-color: styles.$c-black-3;
+
+        @media (min-width: 768px) {
+            border-right: 1px solid styles.$c-black-4;
+        }
+    }
+
+    ul li:hover:not(.active),
+    .hide:hover {
+        background-color: styles.$c-white-1;
+    }
+}
+
+$navboard-pad-left: 24px;
+$navboard-pad-left-desktop: 32px;
+
+.NavBoard {
+    .navboard-wrapper {
+        color: styles.$c-white-4;
+        width: 264px;
+        margin: 0 auto;
+        border-radius: 8px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        @media (min-width: 768px) {
+            width: 260px;
+            margin: 0;
+            border-radius: 0;
+            position: fixed;
+            overflow-y: auto;
+            top: 80px;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 1440px) {
+            width: 300px;
+            top: 96px;
+        }
+    }
+
+    h1 {
+        margin: 0;
+        padding: 16px 0 20px $navboard-pad-left;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 2.4px;
+
+        @media (min-width: 768px) {
+            padding: 30px 0 20px $navboard-pad-left;
+        }
+
+        @media (min-width: 1440px) {
+            padding: 16px 0 20px $navboard-pad-left-desktop;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-right: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            margin-right: 20px;
+        }
+
+        @media (min-width: 1440px) {
+            margin-right: 24px;
+        }
+    }
+
+    li,
+    .hide {
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        padding: 14px 0 14px $navboard-pad-left;
+        
+        @media (min-width: 1440px) {
+            padding: 14px 0 14px $navboard-pad-left-desktop;
+        }
+
+        svg {
+            margin-right: 12px;
+        }
+
+        &:hover {
+            color: styles.$c-purple-1;
+            border-radius: 0 100px 100px 0;
+
+            svg path {
+                fill: styles.$c-purple-1;
+            }
+        }
+
+        &.active {
+            color: styles.$c-white-1;
+            background-color: styles.$c-purple-1;
+            border-radius: 0 100px 100px 0;
+
+            svg path {
+                fill: styles.$c-white-1;
+            }
+        }
+
+        &.create {
+            color: styles.$c-purple-1;
+
+            svg path {
+                fill: styles.$c-purple-1;
+            }
+        }
+    }
+
+    .ThemeToggle {
+        margin: 16px;
+
+        @media (min-width: 768px) {
+            margin: 16px 12px 8px 12px;
+        }
+
+        @media (min-width: 1440px) {
+            margin: 16px 24px 8px 24px;
+        }
+    }
+
+    .hide {
+        margin-bottom: 32px;
+        margin-right: 24px;
+
+        @media (min-width: 768px) {
+            margin-right: 20px;
+        }
+
+        @media (min-width: 1440px) {
+            margin-right: 24px;
+        }
+    }
+}
+
+.OpenNavBoard {
+    position: absolute;
+    bottom: 32px;
+    svg {
+        display: block;
+        padding: 19px 22px 18px 18px;
+        background-color: styles.$c-purple-1;
+        border-radius: 0 100px 100px 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: styles.$c-purple-2;
+        }
+    }
+}
+
+.NavBoard {
+    &.mobile {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        z-index: 2;
+
+        .navboard-wrapper {
+            cursor: auto;
+            margin: auto;
+        }
+
+        &.hidden {
+            visibility: hidden;
+        }
+
+        .spacer {
+            position: absolute;
+            width: 100%;
+            min-height: 80px;
+            top: 403px;
+            pointer-events: none;
+        }
+    }
+
+    &.slide-enter {
+        .navboard-wrapper {
+            @media (min-width: 768px) {
+                left: -260px;
+            }
+
+            @media (min-width: 1440px) {
+                left: -300px;
+            }
+        }
+        .OpenNavBoard {
+            left: -56px;
+        }
+    }
+    &.slide-exit {
+        .navboard-wrapper,
+        .OpenNavBoard {
+            left: 0px;
+        }
+    }
+    &.slide-enter-active {
+        .navboard-wrapper,
+        .OpenNavBoard {
+            left: 0px;
+        }
+    }
+    &.slide-exit-active {
+        .navboard-wrapper {
+            @media (min-width: 768px) {
+                left: -260px;
+            }
+
+            @media (min-width: 1440px) {
+                left: -300px;
+            }
+        }
+        .OpenNavBoard {
+            left: -56px;
+        }
+    }
+    &.slide-enter-active,
+    &.slide-exit-active {
+        .navboard-wrapper,
+        .OpenNavBoard {
+            transition: linear 150ms;
+        }
+    }
+}

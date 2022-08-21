@@ -1,0 +1,46 @@
+@use "../styles/styles.scss";
+
+.light-theme .DeleteMenu .modal-content {
+  input,
+  textarea {
+    color: styles.$c-black-1;
+  }
+}
+
+.dark-theme .DeleteMenu .modal-content {
+  input,
+  textarea {
+    color: styles.$c-white-1;
+  }
+}
+
+.DeleteMenu .modal-content {
+  min-width: 343px;
+  padding: 24px;
+
+  @media (min-width: 512px) {
+    padding: 32px;
+    width: 480px;
+  }
+
+  h1 {
+    color: styles.$c-red-1;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    margin-bottom: 24px;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    column-gap: 16px;
+
+    @media (min-width: 400px) {
+      flex-direction: row;
+      margin-bottom: 8px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "../styles/styles.scss";
+
+.light-theme .BoardMenu .modal-content {
+  input {
+    color: styles.$c-black-1;
+  }
+}
+
+.dark-theme .BoardMenu .modal-content {
+  input {
+    color: styles.$c-white-1;
+  }
+}
+
+.BoardMenu .modal-content {
+  min-width: 343px;
+
+  @media (min-width: 512px) {
+    width: 480px;
+  }
+
+  padding: 32px;
+
+  h1,
+  .form-section {
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+  }
+}

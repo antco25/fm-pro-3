@@ -1,0 +1,113 @@
+@use "../styles/styles.scss";
+
+.light-theme .BoardColumn {
+  .addColumn,
+  .addTask {
+    background-image: linear-gradient(rgba(233, 239, 250, 1), rgba(233, 239, 250, 0.5));
+  }
+
+  .task {
+    background-color: styles.$c-white-1;
+    .task-title {
+      color: styles.$c-black-1;
+    }
+  }
+}
+
+.dark-theme .BoardColumn {
+  .addColumn,
+  .addTask {
+    background-image: linear-gradient(rgba(43, 44, 55, 0.25), rgba(43, 44, 55, 0.125));
+  }
+
+  .task {
+    background-color: styles.$c-black-3;
+    .task-title {
+      color: styles.$c-white-1;
+    }
+  }
+}
+
+.BoardColumn {
+  color: styles.$c-white-4;
+  margin: 24px 0;
+  flex: 0 0 280px;
+
+  .addColumn,
+  .addTask {
+    cursor: pointer;
+    margin-top: 39px;
+    font-size: 24px;
+    line-height: 30px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 392px 0;
+
+    &:hover {
+      color: styles.$c-purple-1;
+    }
+  }
+
+  .addTask {
+    margin-top: 0;
+  }
+
+  .col-title {
+    margin: 0 0 24px 0;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      background-color: styles.$c-purple-1;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 12px;
+      vertical-align: bottom;
+
+      &.dot-one {
+        background-color: styles.$c-blue-1;
+      }
+
+      &.dot-two {
+        background-color: styles.$c-purple-3;
+      }
+
+      &.dot-three {
+        background-color: styles.$c-green-1;
+      }
+    }
+  }
+
+  .task {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 23px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px styles.$c-black-5;
+
+    .task-title {
+      font-size: 15px;
+      line-height: 19px;
+      margin: 0 0 8px 0;
+    }
+
+    .task-subtitle {
+      font-size: 12px;
+      line-height: 15px;
+      margin: 0;
+    }
+
+    &:hover {
+      .task-title {
+        color: styles.$c-purple-1;
+      }
+    }
+  }
+}

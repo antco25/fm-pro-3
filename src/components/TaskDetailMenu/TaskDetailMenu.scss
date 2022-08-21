@@ -1,0 +1,123 @@
+@use "../styles/styles.scss";
+
+.light-theme .TaskDetailMenu .modal-content {
+  .subtasks ul li {
+    color: styles.$c-black-1;
+    background-color: styles.$c-white-2;
+
+    &:hover {
+      background-color: rgba(98, 95, 199, 0.25);
+    }
+
+    .checkIcon {
+      background-color: styles.$c-white-1;
+    }
+  }
+}
+
+.dark-theme .TaskDetailMenu .modal-content {
+  .subtasks ul li {
+    color: styles.$c-white-1;
+    background-color: styles.$c-black-2;
+
+    &:hover {
+      background-color: rgba(98, 95, 199, 0.25);
+    }
+
+    .checkIcon {
+      background-color: styles.$c-black-3;
+    }
+  }
+}
+
+.TaskDetailMenu .modal-content {
+  min-width: 343px;
+
+  @media (min-width: 512px) {
+    width: 480px;
+  }
+
+  padding: 32px;
+
+  .form-section {
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  .menuTitle {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      flex-grow: 1;
+    }
+
+    .OptionsMenu {
+      left: 8px;
+    }
+  }
+
+  .subtasks {
+    h2 {
+      margin-bottom: 16px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    ul li {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin: 8px 0;
+      padding: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      .checkIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border: 1px solid rgba(130, 143, 163, 0.247);
+        border-radius: 2px;
+        flex: 0 0 16px;
+        height: 16px;
+        margin-right: 16px;
+
+        svg path {
+          visibility: hidden;
+        }
+      }
+
+      span {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      &.active {
+        span {
+          opacity: 0.5;
+          text-decoration: line-through;
+        }
+
+        .checkIcon {
+          background-color: styles.$c-purple-1;
+        }
+
+        svg path {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .currentStatus {
+    margin-bottom: 0;
+  }
+}

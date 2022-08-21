@@ -1,0 +1,44 @@
+.App.light-theme .loading {
+    .logo-icon {
+        g path {
+            fill: #000112;
+        }
+    }
+}
+
+.loading {
+    height: 100vh;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    svg {
+        display: block;
+    }
+
+    .loading-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.loading {
+    &.fade-enter-done {
+    }
+
+    &.fade-exit-done {
+    }
+
+    &.fade-enter {
+    }
+
+    &.fade-exit {
+    }
+
+    &.fade-enter-active,
+    .fade-exit-active {
+        transition: 150ms;
+    }
+}
