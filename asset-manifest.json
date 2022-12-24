@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/fm-pro-3/static/css/main.f5cb09f6.css",
-    "main.js": "/fm-pro-3/static/js/main.e965c336.js",
-    "static/js/787.00c541a4.chunk.js": "/fm-pro-3/static/js/787.00c541a4.chunk.js",
-    "static/media/logo.svg": "/fm-pro-3/static/media/logo.1e20d87d61c965503a5323cc3bd2c827.svg",
-    "static/media/icon-light-theme.svg": "/fm-pro-3/static/media/icon-light-theme.b98efecd506358014a7ae1eadb34e36c.svg",
-    "static/media/icon-hide-sidebar.svg": "/fm-pro-3/static/media/icon-hide-sidebar.0e2c68ccd652fb10d8ba0c0c7f3a2f60.svg",
-    "index.html": "/fm-pro-3/index.html",
-    "static/media/icon-dark-theme.svg": "/fm-pro-3/static/media/icon-dark-theme.9812582fa58ec8051801098dbfd8c29d.svg",
-    "static/media/icon-board.svg": "/fm-pro-3/static/media/icon-board.29b48f5174742b4dd3a04f52d710293c.svg",
-    "static/media/icon-show-sidebar.svg": "/fm-pro-3/static/media/icon-show-sidebar.b186c9a8e4a2e4d7d83e0676d3e128fc.svg",
-    "static/media/loading.svg": "/fm-pro-3/static/media/loading.f5eced2467edea1f90dbc49e995c3871.svg",
-    "static/media/icon-logo.svg": "/fm-pro-3/static/media/icon-logo.e60c2fbc3dcefa4256e0569ffba5e523.svg",
-    "static/media/icon-vertical-ellipsis.svg": "/fm-pro-3/static/media/icon-vertical-ellipsis.5c8996197d4a9dd7a7adfa20ce4abef9.svg",
-    "static/media/icon-cross.svg": "/fm-pro-3/static/media/icon-cross.d4ca9e0d2a82f7ea4ae08238a42f84ed.svg",
-    "static/media/icon-add-task-mobile.svg": "/fm-pro-3/static/media/icon-add-task-mobile.2a8e26ad102dab09554faa37c9d62c19.svg",
-    "static/media/icon-check.svg": "/fm-pro-3/static/media/icon-check.4e068cb6e6e3395eda40ccf42917b447.svg",
-    "static/media/icon-chevron-down.svg": "/fm-pro-3/static/media/icon-chevron-down.77595c15c9072ba0ef8a21ab5cc8c376.svg",
-    "main.f5cb09f6.css.map": "/fm-pro-3/static/css/main.f5cb09f6.css.map",
-    "main.e965c336.js.map": "/fm-pro-3/static/js/main.e965c336.js.map",
-    "787.00c541a4.chunk.js.map": "/fm-pro-3/static/js/787.00c541a4.chunk.js.map"
+    "main.css": "/p-kanban/static/css/main.fb6c01e9.css",
+    "main.js": "/p-kanban/static/js/main.1a2a6417.js",
+    "static/js/787.c67ad5dc.chunk.js": "/p-kanban/static/js/787.c67ad5dc.chunk.js",
+    "static/media/logo.svg": "/p-kanban/static/media/logo.1e20d87d61c965503a5323cc3bd2c827.svg",
+    "index.html": "/p-kanban/index.html",
+    "static/media/icon-light-theme.svg": "/p-kanban/static/media/icon-light-theme.b98efecd506358014a7ae1eadb34e36c.svg",
+    "static/media/icon-hide-sidebar.svg": "/p-kanban/static/media/icon-hide-sidebar.0e2c68ccd652fb10d8ba0c0c7f3a2f60.svg",
+    "static/media/icon-dark-theme.svg": "/p-kanban/static/media/icon-dark-theme.9812582fa58ec8051801098dbfd8c29d.svg",
+    "static/media/icon-board.svg": "/p-kanban/static/media/icon-board.29b48f5174742b4dd3a04f52d710293c.svg",
+    "static/media/icon-show-sidebar.svg": "/p-kanban/static/media/icon-show-sidebar.b186c9a8e4a2e4d7d83e0676d3e128fc.svg",
+    "static/media/loading.svg": "/p-kanban/static/media/loading.f5eced2467edea1f90dbc49e995c3871.svg",
+    "static/media/icon-logo.svg": "/p-kanban/static/media/icon-logo.e60c2fbc3dcefa4256e0569ffba5e523.svg",
+    "static/media/icon-vertical-ellipsis.svg": "/p-kanban/static/media/icon-vertical-ellipsis.5c8996197d4a9dd7a7adfa20ce4abef9.svg",
+    "static/media/icon-cross.svg": "/p-kanban/static/media/icon-cross.d4ca9e0d2a82f7ea4ae08238a42f84ed.svg",
+    "static/media/icon-add-task-mobile.svg": "/p-kanban/static/media/icon-add-task-mobile.2a8e26ad102dab09554faa37c9d62c19.svg",
+    "static/media/icon-check.svg": "/p-kanban/static/media/icon-check.4e068cb6e6e3395eda40ccf42917b447.svg",
+    "static/media/icon-chevron-down.svg": "/p-kanban/static/media/icon-chevron-down.77595c15c9072ba0ef8a21ab5cc8c376.svg",
+    "main.fb6c01e9.css.map": "/p-kanban/static/css/main.fb6c01e9.css.map",
+    "main.1a2a6417.js.map": "/p-kanban/static/js/main.1a2a6417.js.map",
+    "787.c67ad5dc.chunk.js.map": "/p-kanban/static/js/787.c67ad5dc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5cb09f6.css",
-    "static/js/main.e965c336.js"
+    "static/css/main.fb6c01e9.css",
+    "static/js/main.1a2a6417.js"
   ]
 }
