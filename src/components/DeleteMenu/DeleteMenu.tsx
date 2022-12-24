@@ -26,8 +26,8 @@ export function DeleteBoardMenu() {
       const boardIndex = boards.findIndex((board) => board._id === currentBoard._id);
       const nextBoard = (boardIndex < boards.length - 1) ? boards[boardIndex + 1] : boards[boardIndex - 1];
 
-      const updatedBoards: { data: BoardType[] } = await axios.delete(apiURL + '/fm-pro-3/board/delete', { data: currentBoard });
-      const columns: { data: ColumnType[] } = await axios.get(apiURL + '/fm-pro-3/column/all/' + nextBoard._id);
+      const updatedBoards: { data: BoardType[] } = await axios.delete(apiURL + rootURL +'/board/delete', { data: currentBoard });
+      const columns: { data: ColumnType[] } = await axios.get(apiURL + rootURL + '/column/all/' + nextBoard._id);
       dispatch(setBoards(updatedBoards.data));
       dispatch(setCurrentBoard({ currentBoard: nextBoard, columns: columns.data }));
       nav(rootURL);
@@ -54,7 +54,7 @@ export function DeleteTaskMenu() {
   const onTaskDelete = async () => {
     dispatch(setModalLoading(true))
     try {
-      const updatedColumns: { data: ColumnType[] } = await axios.delete(apiURL + '/fm-pro-3/task/delete', { data: task });
+      const updatedColumns: { data: ColumnType[] } = await axios.delete(apiURL + rootURL +'/task/delete', { data: task });
       dispatch(setColumns(updatedColumns.data))
       nav(rootURL);
     } catch (err) {

@@ -1,6 +1,11 @@
 @use "../styles/styles.scss";
 
 .light-theme .ErrorPage {
+    .logo-icon {
+        g path {
+            fill: #000112;
+        }
+    }
     color: styles.$c-black-1;
 }
 
@@ -15,4 +20,5 @@
     align-items: center;
     flex-direction: column;
     row-gap: 20px;
+    font-size: 0.875rem;
 }

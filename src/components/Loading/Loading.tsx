@@ -14,12 +14,13 @@ function Loading(props: LoadingProps) {
         setTimeout(() => {
             props.onMinTimeElapsed();
         }, minTime)
-    }, [])
+    }, [props])
 
     return (
         <div className='loading'>
             <Logo className='logo-icon' />
             <LoadingIcon className='loading-icon' />
+            <span>This might take some time...</span>
         </div>
     );
 }

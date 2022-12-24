@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Modal.scss';
 import { ReactComponent as LoadingIcon } from '../Loading/loading.svg';

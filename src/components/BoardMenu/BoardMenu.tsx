@@ -22,7 +22,7 @@ export function BoardNewMenu() {
         name: boardName,
         columns: boardColumns
       }
-      const newBoard: { data: { board: BoardType, columns: ColumnType[] } } = await axios.post(apiURL + '/fm-pro-3/board/create', board);
+      const newBoard: { data: { board: BoardType, columns: ColumnType[] } } = await axios.post(apiURL + rootURL + '/board/create', board);
       dispatch(setBoards([...boards, newBoard.data.board]))
       dispatch(setCurrentBoard({ currentBoard: newBoard.data.board, columns: newBoard.data.columns }))
       nav(rootURL);
@@ -65,7 +65,7 @@ export function BoardEditMenu() {
         existingColumns: existingColumns
       }
 
-      const updatedBoard: { data: { board: BoardType, boards: BoardType[], columns: ColumnType[] } } = await axios.post(apiURL + '/fm-pro-3/board/edit', editBoard);
+      const updatedBoard: { data: { board: BoardType, boards: BoardType[], columns: ColumnType[] } } = await axios.post(apiURL + rootURL + '/board/edit', editBoard);
       dispatch(setBoards(updatedBoard.data.boards))
       dispatch(setCurrentBoard({ currentBoard: updatedBoard.data.board, columns: updatedBoard.data.columns }))
       nav(rootURL);

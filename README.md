@@ -1,4 +1,4 @@
-# Frontend Mentor - Kanban task management web app solution
+# Kanban Task Management App 
 
 This is a solution to the [Kanban task management web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/kanban-task-management-web-app-wgQLt-HlbB). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://antco25.github.io/fm-pro-3/](https://antco25.github.io/fm-pro-3/)
+- Live Site URL: [https://antcodev.ca/p-kanban](https://antcodev.ca/p-kanban)
 
 ## My process
 
@@ -50,4 +50,4 @@ Users should be able to:
 
 ## Author
 
-- [My Portfolio](https://antco25.github.io)
+- [My Portfolio](https://antcodev.ca)

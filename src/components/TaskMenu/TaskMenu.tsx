@@ -24,7 +24,7 @@ export function TaskNewMenu() {
   const onCreateTask = async (task: TaskType) => {
     dispatch(setModalLoading(true))
     try {
-      const response: { data: { task: TaskType, columns: ColumnType[] } } = await axios.post(apiURL + '/fm-pro-3/task/create', task);
+      const response: { data: { task: TaskType, columns: ColumnType[] } } = await axios.post(apiURL + rootURL + '/task/create', task);
       dispatch(setColumns(response.data.columns));
       dispatch(setCurrentTask(response.data.task));
       nav(`${rootURL}/detail/${response.data.task.subtitle}`)
@@ -46,7 +46,7 @@ export function TaskEditMenu() {
   const onEditTask = async (task: TaskType) => {
     dispatch(setModalLoading(true))
     try {
-      const response: { data: { task: TaskType, columns: ColumnType[] } } = await axios.post(apiURL + '/fm-pro-3/task/edit', task);
+      const response: { data: { task: TaskType, columns: ColumnType[] } } = await axios.post(apiURL + rootURL + '/task/edit', task);
       dispatch(setCurrentTask(response.data.task))
       dispatch(setColumns(response.data.columns))
       nav(-1);

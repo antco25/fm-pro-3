@@ -34,7 +34,7 @@ function NavBoard(props: MediaQueryProps) {
   const switchBoards = async (board: BoardType) => {
     dispatch(setBoardLoading(true))
     try {
-      const columns: { data: ColumnType[] } = await axios.get(apiURL + '/fm-pro-3/column/all/' + board._id);
+      const columns: { data: ColumnType[] } = await axios.get(apiURL + rootURL + '/column/all/' + board._id);
       dispatch(setCurrentBoard({ currentBoard: board, columns: columns.data }));
     } catch (err) {
 

@@ -1,8 +1,20 @@
+@use "../styles/styles.scss";
+
 .App.light-theme .loading {
     .logo-icon {
         g path {
             fill: #000112;
         }
+    }
+
+    span {
+        color: styles.$c-black-1;
+    }
+}
+
+.App.dark-theme .loading {
+    span {
+        color: styles.$c-white-1;
     }
 }
 
@@ -22,21 +34,13 @@
         width: 100px;
         height: 100px;
     }
+
+    span {
+        font-size: 0.875rem;
+    }
 }
 
 .loading {
-    &.fade-enter-done {
-    }
-
-    &.fade-exit-done {
-    }
-
-    &.fade-enter {
-    }
-
-    &.fade-exit {
-    }
-
     &.fade-enter-active,
     .fade-exit-active {
         transition: 150ms;

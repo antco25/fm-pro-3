@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ThemeToggle.scss';
 import lightIcon from '../../assets/icon-light-theme.svg';
 import darkIcon from '../../assets/icon-dark-theme.svg';

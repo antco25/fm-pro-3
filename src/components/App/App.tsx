@@ -17,7 +17,7 @@ import { TaskEditMenu, TaskNewMenu } from '../TaskMenu/TaskMenu';
 import './App.scss';
 import { ReactComponent as LoadingIcon } from '../Loading/loading.svg';
 
-export const rootURL = '/fm-pro-3';
+export const rootURL = '/p-kanban';
 export const apiURL = 'https://ac-portfolio-db.onrender.com'
 
 function App() {

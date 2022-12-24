@@ -8,7 +8,7 @@ import { ColumnType, selectCurrentTask, setColumns, setCurrentTask, TaskType, us
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { setModalLoading } from '../../redux/appData/appDataSlice';
-import { apiURL } from '../App/App';
+import { apiURL, rootURL } from '../App/App';
 
 function TaskDetailMenu() {
   const { task, columns } = useSelector(selectCurrentTask);
@@ -40,7 +40,7 @@ function TaskDetailMenu() {
   async function saveSubtask(task: TaskType) {
     dispatch(setModalLoading(true))
     try {
-      const response: { data: { task: TaskType, columns: ColumnType[] } } = await axios.post(apiURL + '/fm-pro-3/task/edit', task);
+      const response: { data: { task: TaskType, columns: ColumnType[] } } = await axios.post(apiURL + rootURL +'/task/edit', task);
       dispatch(setCurrentTask(response.data.task))
       dispatch(setColumns(response.data.columns))
     } catch (err) {

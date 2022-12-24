@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { useDispatch } from 'react-redux';
-import { apiURL } from '../../components/App/App';
+import { apiURL, rootURL } from '../../components/App/App';
 import store, { RootState } from '../store'
 
 /**
@@ -12,7 +12,7 @@ export const fetchApp = createAsyncThunk(
     'dbData/fetchApp',
     async () => {
         //Get board list
-        const boards: { data: BoardType[] } = await axios.get(apiURL + '/fm-pro-3/board/all');
+        const boards: { data: BoardType[] } = await axios.get(apiURL + rootURL + '/board/all');
 
         if (boards.data.length === 0) {
             //Create default board
@@ -23,13 +23,13 @@ export const fetchApp = createAsyncThunk(
                 columns: []
             } as BoardType
 
-            const defaultBoard: { data: { board: BoardType, columns: ColumnType[] } } = await axios.post(apiURL +'/fm-pro-3/board/create', board);
+            const defaultBoard: { data: { board: BoardType, columns: ColumnType[] } } = await axios.post(apiURL + rootURL + '/board/create', board);
             return { boards: [defaultBoard.data.board], currentBoard: defaultBoard.data.board, columns: defaultBoard.data.columns };
         }
 
         //Get current board columns and tasks
         const currentBoard = boards.data[0]
-        const columns: { data: ColumnType[] } = await axios.get(apiURL + '/fm-pro-3/column/all/' + currentBoard._id);
+        const columns: { data: ColumnType[] } = await axios.get(apiURL + rootURL + '/column/all/' + currentBoard._id);
 
         return { boards: boards.data, currentBoard: currentBoard, columns: columns.data };
     }

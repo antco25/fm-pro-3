@@ -1,8 +1,8 @@
 {
-  "name": "fm-pro-3",
+  "name": "p-kanban",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://antco25.github.io/fm-pro-3",
+  "homepage": "https://antcodev.ca/p-kanban",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.4",
