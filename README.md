@@ -10,6 +10,7 @@ This is a solution to the [Kanban task management web app challenge on Frontend 
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -47,6 +48,12 @@ Users should be able to:
 - [Redux](https://redux.js.org/) - Frontend JS library
 - [Node](https://nodejs.org/en/) - Backend JS library
 - [MongoDB](https://www.mongodb.com/) - NoSQL Database
+
+### What I learned
+
+- This is my first full-stack project, utilizing an Express / MongoDB backend. I had made
+  an E/M backend before but not as part of a full project.
+- Learned about backend hosting
 
 ## Author
 
